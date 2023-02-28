@@ -35,39 +35,39 @@
     return [self mj_localizedStringForKey:key value:nil];
 }
 
+/**
+ 项目中用到的语言
+ @"zh-Hans"   //.简体
+ @"zh-Hant"   //.繁体
+ @"en"        //.英语
+ @"vi"        //越南语
+ @"hu"        //匈牙利语
+ @"it"        //意大利语
+ @"ru"        //.俄语
+ @"fr"        //法语
+ @"pt"        //葡萄牙语
+ @"de"        //德语
+ @"lt"        //立陶宛语
+ @"es"        //西班牙语
+ @"pl"        //波兰语 Polski pl-CN
+ @"he"        //希伯来语
+ @"ar"        //阿拉伯语ar-CN
+ @"cs"        //捷克语
+ @"nl"        //荷兰
+ @"ko"        //.韩语
+ @"uk"        //.乌克兰
+ */
 + (NSString *)mj_localizedStringForKey:(NSString *)key value:(NSString *)value
 {
-    static NSBundle *bundle = nil;
-    if (bundle == nil) {
-        NSString *language = MJRefreshConfig.defaultConfig.languageCode;
-        // 如果配置中没有配置语言
-        if (!language) {
-            // （iOS获取的语言字符串比较不稳定）目前框架只处理en、zh-Hans、zh-Hant三种情况，其他按照系统默认处理
-            language = [NSLocale preferredLanguages].firstObject;
-        }
-        
-        if ([language hasPrefix:@"en"]) {
-            language = @"en";
-        } else if ([language hasPrefix:@"zh"]) {
-            if ([language rangeOfString:@"Hans"].location != NSNotFound) {
-                language = @"zh-Hans"; // 简体中文
-            } else { // zh-Hant\zh-HK\zh-TW
-                language = @"zh-Hant"; // 繁體中文
-            }
-        } else if ([language hasPrefix:@"ko"]) {
-            language = @"ko";
-        } else if ([language hasPrefix:@"ru"]) {
-            language = @"ru";
-        } else if ([language hasPrefix:@"uk"]) {
-            language = @"uk";
-        } else {
-            language = @"en";
-        }
-        
-        // 从MJRefresh.bundle中查找资源
-        bundle = [NSBundle bundleWithPath:[[NSBundle mj_refreshBundle] pathForResource:language ofType:@"lproj"]];
+    NSString *language = MJRefreshConfig.defaultConfig.languageCode;
+    // 如果配置中没有配置语言
+    if (!language) {
+        // （iOS获取的语言字符串比较不稳定）目前框架只处理en、zh-Hans、zh-Hant三种情况，其他按照系统默认处理
+        language = [NSLocale preferredLanguages].firstObject;
     }
-    value = [bundle localizedStringForKey:key value:value table:nil];
-    return [[NSBundle mainBundle] localizedStringForKey:key value:value table:nil];
+    // 从MJRefresh.bundle中查找资源
+    NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle mj_refreshBundle] pathForResource:language ofType:@"lproj"]];
+    return [bundle localizedStringForKey:key value:value table:nil];
 }
+
 @end
