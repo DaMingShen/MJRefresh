@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Consumer
+
+  Created by longse on 2022/8/9.
+  
+*/
+
+"MJRefreshHeaderIdleText" = "プルダウンして更新";
+"MJRefreshHeaderPullingText" = "リリースしてリフレッシュ";
+"MJRefreshHeaderRefreshingText" = "読み込み中...";
+
+"MJRefreshAutoFooterIdleText" = "タップまたはプルアップしてさらに読み込みます";
+"MJRefreshAutoFooterRefreshingText" = "読み込み中...";
+"MJRefreshAutoFooterNoMoreDataText" = "もうデータはありません";
+
+"MJRefreshBackFooterIdleText" = "プルアップしてさらにロード";
+"MJRefreshBackFooterPullingText" = "リリースしてさらに読み込む";
+"MJRefreshBackFooterRefreshingText" = "読み込み中...";
+"MJRefreshBackFooterNoMoreDataText" = "もうデータはありません";
+
+"MJRefreshHeaderLastTimeText" = "最後の更新: ";
+"MJRefreshHeaderDateTodayText" = "今日";
+"MJRefreshHeaderNoneLastDateText" = "記録なし";
