@@ -56,6 +56,7 @@
  @"nl"        //.荷兰
  @"ko"        //.韩语
  @"uk"        //.乌克兰
+ @"el"        //.希腊
  */
 + (NSString *)mj_localizedStringForKey:(NSString *)key value:(NSString *)value
 {
