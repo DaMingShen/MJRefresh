@@ -6,16 +6,16 @@
   
 */
 
-"MJRefreshHeaderIdleText" = "プルダウンして更新";
-"MJRefreshHeaderPullingText" = "リリースしてリフレッシュ";
+"MJRefreshHeaderIdleText" = "下に引っ張って更新";
+"MJRefreshHeaderPullingText" = "指を離して更新";
 "MJRefreshHeaderRefreshingText" = "読み込み中...";
 
-"MJRefreshAutoFooterIdleText" = "タップまたはプルアップしてさらに読み込みます";
+"MJRefreshAutoFooterIdleText" = "タップまたは上に引っ張ってさらに読み込む";
 "MJRefreshAutoFooterRefreshingText" = "読み込み中...";
 "MJRefreshAutoFooterNoMoreDataText" = "もうデータはありません";
 
-"MJRefreshBackFooterIdleText" = "プルアップしてさらにロード";
-"MJRefreshBackFooterPullingText" = "リリースしてさらに読み込む";
+"MJRefreshBackFooterIdleText" = "上に引っ張ってさらに読み込む";
+"MJRefreshBackFooterPullingText" = "指を離してさらに読み込む";
 "MJRefreshBackFooterRefreshingText" = "読み込み中...";
 "MJRefreshBackFooterNoMoreDataText" = "もうデータはありません";
 
